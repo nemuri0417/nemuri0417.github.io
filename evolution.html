@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顫弦蠑螈介紹網站</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* 固定頭部並讓其保持在最上方 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #c7a8d7;
+            z-index: 1000;
+            padding: 5px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        nav {
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 8px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        main {
+            margin-top: 120px;
+        }
+
+        /* 圖片置中樣式 */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.9);
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #c7a8d7;
+            color: white;
+        }
+
+        /* 旋轉木馬樣式 */
+        .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .carousel button {
+            background-color: #a28cc3;
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel button:hover {
+            background-color: #9c7da3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>顫弦蠑螈介紹網站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">基本介紹</a></li>
+                <li><a href="skills.html">技能與特性</a></li>
+                <li class="active"><a href="evolution.html">進化</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>二階進化</h2>
+            <p>顫弦蠑螈的第一階是毒電嬰。</p>
+            <div class="image-container">
+                <img src="image/zoomcrop.jpg" alt="毒電嬰圖片" width="400">
+            </div>
+            <p>第二階則是依照毒電嬰的性格進化為高調或低調的顫弦蠑螈。</p>
+            <div class="carousel">
+                <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                <div class="carousel-images">
+                    <img id="carousel-image" src="image/1.jpg" alt="高調顫弦蠑螈" width="500">
+                </div>
+                <button class="next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+            <p>左邊黃色的是高調型態，右邊藍色的是低調型態。</p>
+            <h2>特殊進化-超極巨</h2>
+            <p>在伽勒爾地區的能量點附近通過極巨腕帶可以讓寶可夢進行極巨化。</p>
+            <div class="image-container">
+                <img src="image/news-img-v20-1_3.png" alt="超極巨化顫弦蠑螈" width="500">
+            </div>
+            <div class="image-container">
+                <img src="image/72125fd1e51dc6ea56e976144817o4t5.jpg" alt="超極巨化顫弦蠑螈對比" width="500">
+            </div>
+            <h2>官方介紹影片</h2>
+            <video src="viedo/【官方】『寶可夢 劍／盾』NEWS .mp4" controls autoplay loop></video>
+        </section>
+    </main>
+
+    <footer>
+        <p>顫弦蠑螈介紹網站</p>
+    </footer>
+
+    <script>
+        // 圖片列表與索引初始化
+        const images = [
+            { src: "image/1.jpg", alt: "高調顫弦蠑螈" },
+            { src: "image/7.jpg", alt: "低調顫弦蠑螈" }
+        ];
+        let currentIndex = 0;
+
+        // 切換圖片函數
+        function changeImage(direction) {
+            // 更新索引
+            currentIndex += direction;
+
+            // 確保索引在範圍內
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+
+            // 更新圖片
+            const carouselImage = document.getElementById("carousel-image");
+            carouselImage.src = images[currentIndex].src;
+            carouselImage.alt = images[currentIndex].alt;
+        }
+    </script>
+</body>
+</html>
+

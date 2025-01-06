@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顫弦蠑螈介紹網站</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script> <!-- 加入互動功能 -->
+    <style>
+       /* 固定頭部並讓其保持在最上方 */
+       header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #c7a8d7;
+            z-index: 1000;
+            padding: 5px 0;  /* 紫色區域高度縮小三分之一 */
+        }
+
+        /* 標題置中，分頁右對齊 */
+        header h1 {
+            text-align: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        nav {
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 8px; /* 縮小按鍵間距 */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;  /* 分頁按鈕字體大小調整為13px */
+        }
+
+        /* 頁面內容距離固定頭部 */
+        main {
+            margin-top: 120px; /* 調整這個值以使頁面內容距離固定的頭部 */
+        }
+
+        /* 圖片樣式 */
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        /* 當鼠標懸停在圖片上時變換樣式 */
+        img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.9);
+        }
+
+        /* 影片樣式 */
+        video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        /* 回到頂部按鈕樣式 */
+        #back-to-top {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #a28cc3; /* 深紫色 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 20px auto;
+            display: block;
+            /* 不再固定位置 */
+            position: relative; /* 改為相對位置 */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* 水平居中 */
+        }
+
+        #back-to-top:hover {
+            background-color: #9c7da3; /* 深紫色 hover */
+        }
+
+        /* 回到頂部按鈕按下 */
+        #back-to-top:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>顫弦蠑螈介紹網站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="nav-home">首頁</a></li>
+                <li><a href="about.html" id="nav-about">基本介紹</a></li>
+                <li><a href="skills.html" id="nav-skills">技能與特性</a></li>
+                <li><a href="evolution.html" id="nav-evolution">進化</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>歡迎來到我介紹顫弦蠑螈的網站</h2>
+            <p>這裡介紹了寶可夢顫弦蠑螈的一些基本相關資訊，包含基本介紹、技能與特性、進化。</p>
+
+            <!-- 圖片輪播 -->
+            <div class="carousel">
+                <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="image/AnyConv.com__IMG_3433.png" alt="卡牌1">
+                    <img src="image/AnyConv.com__IMG_0330.png" alt="卡牌2">
+                    <img src="image/AnyConv.com__IMG_0555.png" alt="卡牌2">
+                    <img src="image/AnyConv.com__IMG_0563.png" alt="卡牌2">
+                    <!-- 可以繼續加入更多圖片 -->
+                </div>
+                <button class="next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+            <p>上面是我自己一小部份的卡牌收藏跟去年去日本拍的紀念照，它們是我最喜歡的寶可夢。</p>
+            <p>還有一些扭蛋、娃娃之類的收藏太多了沒有拍。</p>
+            <p>這次透過程式設計的期中作業來用這個網站來簡單介紹一下它們。</p>
+          
+
+            <h1>音樂推薦</h1>
+            <p>這是我最喜歡的歌，是寶可夢的曲，可以配合著一起看。</p>
+            <video src="viedo/【Official】Pokémon Special Music Video 「GOTCHA！」 _ BUMP OF CHICKEN - Acacia.mp4" 
+                controls autoplay loop></video>
+            <p>【Official】Pokémon Special Music Video 「GOTCHA！」 | BUMP OF CHICKEN - Acacia</p>
+
+            <h1>即將登場</h1>
+            <p>顫弦蠑螈在2024/11/23要在Pokémon GO初登場，到時候可以支持一下我們顫弦蠑螈。</p>
+            <video src="viedo/超極巨化的「顫弦蠑螈」將於《Pokémon GO》震撼登場！.mp4" 
+                controls autoplay loop></video>
+        </section>
+        
+        <section id="fun-section" class="fade-in">
+            <h2>顫弦蠑螈小知識</h2>
+            <p id="random-fact">點擊按鈕來了解一條新的顫弦蠑螈小知識！</p>
+            <button id="fact-btn">顯示小知識</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 顫弦蠑螈介紹網站</p>
+    </footer>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="back-to-top">回到頂部</button>
+
+    <script>
+        // 圖片輪播功能
+        let currentIndex = 0;
+
+        function changeImage(direction) {
+            const images = document.querySelectorAll('.carousel-images img');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            document.querySelector('.carousel-images').style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+
+        // 回到頂部按鈕功能
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // 顯示小知識功能
+        const factBtn = document.getElementById('fact-btn');
+        const randomFact = document.getElementById('random-fact');
+
+        factBtn.addEventListener('click', function() {
+            const facts = [
+                '顫弦蠑螈是寶可夢中少數擁有特殊音樂技能的寶可夢。',
+                '顫弦蠑螈能透過電音的力量來達到超強的戰鬥效果。',
+                '顫弦蠑螈能夠將音波調整至高頻率，這讓它能夠進行遠距離戰鬥。'
+            ];
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            randomFact.textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>

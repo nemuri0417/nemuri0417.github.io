@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於顫弦蠑螈</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* 固定頭部並讓其保持在最上方 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #c7a8d7;
+            z-index: 1000;
+            padding: 5px 0;
+        }
+
+        /* 標題置中，分頁右對齊 */
+        header h1 {
+            text-align: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        nav {
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 8px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        /* 頁面內容距離固定頭部 */
+        main {
+            margin-top: 120px;
+        }
+
+        /* 圖片樣式 */
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.9);
+        }
+
+        /* 圖片容器樣式 */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #c7a8d7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>顫弦蠑螈介紹網站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li class="active"><a href="about.html">基本介紹</a></li>
+                <li><a href="skills.html">技能與特性</a></li>
+                <li><a href="evolution.html">進化</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>基本介紹</h2>
+            <p>顫弦蠑螈基於龐克搖滾及大冠歐螈，尤其是處於繁殖期長出鋸齒狀高聳背鰭的雄性。</p>
+            <p>它的設計靈感來自搖滾樂手，擁有非常鮮明的外觀和充滿音樂感的技能。</p>
+            <p>性格取決於它在進化時的兩種型態——低調型態與高調型態，它們各自的顏色和外觀略有不同。</p>
+
+            <h3>其他形象</h3>
+            <p>毒電嬰造型與異色版本：</p>
+            <div class="image-container">
+                <img src="image/010206.png" alt="毒電嬰" width="200">
+            </div>
+            <p>顫弦蠑螈造型與異色版本：</p>
+            <div class="image-container">
+                <img src="image/222.png" alt="顫弦蠑螈" width="700">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 顫弦蠑螈介紹網站</p>
+    </footer>
+</body>
+</html>
+

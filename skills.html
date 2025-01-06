@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於顫弦蠑螈</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* 固定頭部並讓其保持在最上方 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #c7a8d7;
+            z-index: 1000;
+            padding: 5px 0;  /* 紫色區域高度縮小三分之一 */
+        }
+
+        /* 標題置中，分頁右對齊 */
+        header h1 {
+            text-align: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        nav {
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 8px; /* 縮小按鍵間距 */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;  /* 分頁按鈕字體大小調整為13px */
+        }
+
+        /* 頁面內容距離固定頭部 */
+        main {
+            margin-top: 120px; /* 調整這個值以使頁面內容距離固定的頭部 */
+        }
+
+        /* 圖片樣式 */
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        /* 當鼠標懸停在圖片上時變換樣式 */
+        img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.9);
+        }
+
+        /* 影片樣式 */
+        video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        /* 回到頂部按鈕樣式 */
+        #back-to-top {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #a28cc3; /* 深紫色 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 20px auto;
+            display: block;
+            /* 不再固定位置 */
+            position: relative; /* 改為相對位置 */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* 水平居中 */
+        }
+
+        #back-to-top:hover {
+            background-color: #9c7da3; /* 深紫色 hover */
+        }
+
+        /* 回到頂部按鈕按下 */
+        #back-to-top:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>顫弦蠑螈介紹網站</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">基本介紹</a></li>
+                <li class="active"><a href="skills.html">技能與特性</a></li>
+                <li><a href="evolution.html">進化</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>技能與特性</h2>
+            <p>戰顫弦蠑螈擁有毒系與電系的強大技能，包括「毒針」和「打雷」等常用攻擊。</p>
+            <p>它的專屬技能「酸性搖滾」可以對對手造成中毒效果，是一項音樂性十足的技能。</p>
+            <p>此外，它的特性「正電」和「負電」在雙打對戰中可以強化同伴的攻擊力，讓它在團隊作戰中非常實用。</p>
+            <img src="image/pokemon-image_v20_1_1-3.png" alt="顫弦蠑螈圖像" width="600">
+
+            <h2>特徵說明</h2>
+            <p>高調的樣子的顫弦蠑螈是個對自己信心十足的急性子。</p>
+            <p>只要與人類或其他寶可夢對上視線，就會氣勢洶洶地接近對方，不管對手是誰都會毫不示弱地發起攻擊。</p>
+            <p>它會大口喝下渾濁的水，吸收其中所含的毒素，通過分解攝入體內的毒素來生成電力。</p>
+            <p>在此過程中，胸部會受到強烈刺激，當它一邊排出帶毒的汗水一邊用力抓撓胸部的突起物來製造電力時，四周會響起如同吉他演奏般的聲音。</p>
+            <p>彈奏時釋放出的電擊可輕易超過15000伏特。</p>
+            <img src="image/79d9eab644c7a867ded6e6b05717o4l5.jpg" alt="顫弦蠑螈電擊圖像" width="600">
+
+            <p>低調的樣子的顫弦蠑螈對自己的能力評價甚高，常常做出些自私任性的行為，任何對手都不放在眼裡。</p>
+            <p>遇到人類或其他寶可夢時雖不主動發起攻擊，但會挑釁對方以引起爭鬥。</p>
+            <p>它面對任何對手都能鎮定自若，它那一臉慵懶地挑釁著對手的風格受到了不少年輕人的憧憬。</p>
+            <p>它的發電器官長在胸部，會大口喝下淤水，並在體內製造電氣，發電時會發出節拍精準的電貝斯演奏般的聲音。</p>
+            <p>當它彈奏長在胸部的發電器官製造電力時，其電壓據說高達15000伏特，極其危險。</p>
+            <img src="image/d067f3be49ef9183527273069917o4o5.jpg" alt="顫弦蠑螈發電器官" width="600">
+
+            <h2>種族值</h2>
+            <img src="image/14251.png" alt="顫弦蠑螈種族值" width="600">
+
+            <h1>配招參考影片</h1>
+            <p>【寶可夢朱紫】顫弦蠑螈疊加所有強化之後打出_最強絕招_爆音波威力爆錶！</p>
+            <video src="viedo/【寶可夢朱紫】顫弦蠑螈疊加所有強化之後打出_最強絕招_爆音波威力爆錶！.mp4" controls autoplay loop></video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 顫弦蠑螈介紹網站</p>
+    </footer>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="back-to-top">回到頂部</button>
+
+    <script>
+        // 回到頂部按鈕功能
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
